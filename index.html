@@ -46,7 +46,7 @@
 
   <!-- mobile nav overlay -->
   <div class="mobile-nav" id="mobileNav">
-    <button class="close-btn" id="closeNav">[ CLOSE ]</button>
+    <button class="close-btn" id="closeNav">✕</button>
     <a href="#hero">HOME</a>
     <a href="#latestArticles">ARTICLES</a>
     <a href="#authors">AUTHORS</a>
@@ -149,8 +149,8 @@
 
   <!-- latest articles -->
   <section id="latestArticles">
-    <div class="section-kicker reveal">LATEST ARTICLES</div>
-    <h2 class="section-title reveal reveal-d1" data-letter-reveal>WHAT'S <span class="hl">HOT</span></h2>
+    <div class="section-kicker reveal">WHAT'S HOT</div>
+    <h2 class="section-title reveal reveal-d1" data-letter-reveal>LATEST ARTICLES</h2>
 
     <div class="articles-layout">
       <div>
@@ -251,12 +251,12 @@
         </div>
         <div class="sidebar-block">
           <div class="sidebar-header">CATEGORIES</div>
-          <div class="cat-grid">
-            <a href="#" class="cat-btn">TECH <span class="cat-count">24</span></a>
-            <a href="#" class="cat-btn">DESIGN <span class="cat-count">18</span></a>
-            <a href="#" class="cat-btn">CULTURE <span class="cat-count">15</span></a>
-            <a href="#" class="cat-btn">OPINION <span class="cat-count">12</span></a>
-            <a href="#" class="cat-btn full">TUTORIALS <span class="cat-count">9</span></a>
+          <div class="cat-list">
+            <a href="#" class="cat-btn cat-yellow">TECH (24)</a>
+            <a href="#" class="cat-btn cat-green">DESIGN (18)</a>
+            <a href="#" class="cat-btn cat-pink">CULTURE (15)</a>
+            <a href="#" class="cat-btn cat-blue">OPINION (12)</a>
+            <a href="#" class="cat-btn cat-lavender">TUTORIALS (9)</a>
           </div>
         </div>
       </aside>
@@ -266,17 +266,15 @@
   <!-- authors section -->
   <section id="authors">
     <div class="authors-header">
-      <div>
-        <div class="section-kicker reveal">MEET THE AUTHORS</div>
-        <h2 class="section-title reveal reveal-d1" data-letter-reveal>THE <span class="hl">REBELS</span></h2>
-      </div>
-      <p class="reveal reveal-d2">The rebels behind<br>the brutal truth.</p>
+      <h2 class="section-title reveal">MEET THE AUTHORS</h2>
+      <p class="reveal reveal-d1">The rebels behind the brutal truth</p>
+      <div class="authors-divider reveal reveal-d1"></div>
     </div>
     <div class="authors-grid">
       <div class="author-card reveal reveal-d1" data-letter="A">
-        <div class="author-badge">// FOUNDER</div>
-        <div class="author-avatar">
+        <div class="author-img-wrap">
           <img src="imgs/avatar-2.jpg" alt="Alex Brutal" />
+          <span class="author-badge">FOUNDER</span>
         </div>
         <h3 class="author-name">ALEX BRUTAL</h3>
         <p class="author-role">Tech Critic & Design Rebel</p>
@@ -288,11 +286,11 @@
         </div>
       </div>
       <div class="author-card reveal reveal-d2" data-letter="R">
-        <div class="author-badge">// LEAD</div>
-        <div class="author-avatar">
+        <div class="author-img-wrap">
           <img src="imgs/avatar-2-CwUcGkzI.jpg" alt="Arnold Reeve" />
+          <span class="author-badge">LEAD</span>
         </div>
-        <h3 class="author-name">ARNOLD REEVE</h3>
+        <h3 class="author-name">Arnold Reeve</h3>
         <p class="author-role">UX Anarchist & Visual Provocateur</p>
         <p class="author-bio">Challenging design norms and creating chaos that actually works. Former corporate designer turned rebel with a cause.</p>
         <div class="author-socials">
@@ -302,9 +300,9 @@
         </div>
       </div>
       <div class="author-card reveal reveal-d3" data-letter="M">
-        <div class="author-badge">// VIRAL</div>
-        <div class="author-avatar">
+        <div class="author-img-wrap">
           <img src="imgs/avatar-8.jpg" alt="Mike Edge" />
+          <span class="author-badge">VIRAL</span>
         </div>
         <h3 class="author-name">MIKE EDGE</h3>
         <p class="author-role">Cultural Critic & Trend Destroyer</p>
@@ -320,58 +318,46 @@
 
   <!-- community section -->
   <section id="community">
+    <div class="community-header">
+      <h2 class="section-title reveal">JOIN THE REBELLION</h2>
+      <p class="reveal reveal-d1">Where rebels gather to change the digital world</p>
+      <div class="community-divider reveal reveal-d1"></div>
+    </div>
+
     <div class="community-inner">
       <div>
-        <div class="section-kicker reveal">JOIN THE REBELLION</div>
-        <h2 class="community-big reveal reveal-d1">
-          BECOME PART<br>
-          OF SOMETHING<br>
-          <span class="hl-pink">BIGGER</span>
-        </h2>
-        <p style="font-size:.9rem;line-height:1.8;color:var(--muted);margin-bottom:2rem;max-width:42ch;" class="reveal reveal-d2">
-          Join thousands of designers, developers, and digital rebels who are tired
+        <h3 class="community-big reveal reveal-d1">BECOME PART OF SOMETHING BIGGER</h3>
+        <div class="community-desc reveal reveal-d2">
+          <p>Join thousands of designers, developers, and digital rebels who are tired
           of the same old boring content. Our community is where raw ideas meet
-          bold execution and real change happens.
-        </p>
+          bold execution and real change happens.</p>
+        </div>
         <ul class="perks-list reveal reveal-d2">
           <li class="perk-item">
-            <span class="perk-icon">📬</span>
-            <div class="perk-text">
-              <strong>Weekly Brutal Insights Newsletter</strong>
-              Exclusive content delivered straight to your inbox. No fluff, ever.
-            </div>
+            <span class="perk-icon">✅</span>
+            <span class="perk-text">Weekly brutal insights newsletter with exclusive content</span>
           </li>
           <li class="perk-item">
             <span class="perk-icon">💬</span>
-            <div class="perk-text">
-              <strong>Exclusive Community Discord</strong>
-              Real-time discussions with fellow rebels worldwide.
-            </div>
+            <span class="perk-text">Exclusive community Discord access for real-time discussions</span>
           </li>
           <li class="perk-item">
-            <span class="perk-icon">⚡</span>
-            <div class="perk-text">
-              <strong>Early Access to Articles</strong>
-              Read new pieces before they go public.
-            </div>
+            <span class="perk-icon">⭐</span>
+            <span class="perk-text">Early access to new articles before they go public</span>
           </li>
           <li class="perk-item">
-            <span class="perk-icon">🔥</span>
-            <div class="perk-text">
-              <strong>Submit Your Brutal Takes</strong>
-              Write for us and get featured in front of 48K+ readers.
-            </div>
+            <span class="perk-icon">✏️</span>
+            <span class="perk-text">Submit your own brutal takes and get featured</span>
           </li>
         </ul>
-        <a href="#" class="join-btn reveal reveal-d3" data-magnetic>JOIN NOW — IT'S FREE</a>
+        <a href="#" class="join-btn reveal reveal-d3" data-magnetic>🎯 JOIN NOW - IT'S FREE</a>
       </div>
 
       <!-- testimonials -->
-      <div>
-        <div class="testimonials-tag reveal">// WHAT REBELS ARE SAYING</div>
+      <div class="testimonials-wrap reveal reveal-d2">
+        <h4 class="testimonials-title">WHAT REBELS ARE SAYING</h4>
         <div class="testimonials">
-          <blockquote class="testimonial reveal reveal-d1">
-            <div class="t-quote-mark">"</div>
+          <blockquote class="testimonial">
             <p class="testimonial-text">"Finally, a blog that tells it like it is. No corporate BS, just pure truth about what's really happening in tech. This is the wake-up call our industry needed."</p>
             <div class="testimonial-author">
               <div class="t-avatar"><img src="imgs/avatar-4-EAD2OaMD.avif" alt="Mark T." /></div>
@@ -381,8 +367,7 @@
               </div>
             </div>
           </blockquote>
-          <blockquote class="testimonial reveal reveal-d2">
-            <div class="t-quote-mark">"</div>
+          <blockquote class="testimonial">
             <p class="testimonial-text">"The UX Review changed how I think about design. It's raw, honest, and exactly what our industry needs. Every article challenges my assumptions."</p>
             <div class="testimonial-author">
               <div class="t-avatar"><img src="imgs/avatar-5-CDQD_dyw.jpg" alt="Alex M." /></div>
@@ -392,9 +377,8 @@
               </div>
             </div>
           </blockquote>
-          <blockquote class="testimonial reveal reveal-d3">
-            <div class="t-quote-mark">"</div>
-            <p class="testimonial-text">"The most authentic voice in digital culture. Every article makes me think differently about the work I do."</p>
+          <blockquote class="testimonial">
+            <p class="testimonial-text">"The most authentic voice in digital culture. Every article challenges my assumptions and makes me think differently about the work I do."</p>
             <div class="testimonial-author">
               <div class="t-avatar"><img src="imgs/avatar-6-CMLrVfwj.avif" alt="James K." /></div>
               <div>
