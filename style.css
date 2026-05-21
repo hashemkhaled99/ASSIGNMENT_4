@@ -386,8 +386,8 @@ section { padding: 6rem max(2.5rem, calc((100% - 1340px) / 2)); }
 .article-card:nth-child(2) { background: #FFF5F0; }
 .article-card:nth-child(3) { background: #F5FFF0; }
 
-.article-img { overflow:hidden; }
-.article-img img { height: 200px; transition: transform .5s var(--ease-out), filter .4s ease; }
+.article-img { overflow:hidden; height: 100%; }
+.article-img img { height: 100%; width: 100%; transition: transform .5s var(--ease-out), filter .4s ease; }
 .article-card:hover .article-img img { transform: scale(1.06); filter: hue-rotate(15deg); }
 
 .article-body { padding: 1.6rem; display:flex; flex-direction:column; justify-content:space-between; }
@@ -507,6 +507,7 @@ section { padding: 6rem max(2.5rem, calc((100% - 1340px) / 2)); }
   border: 3px solid var(--black); box-shadow: var(--sh-lg);
   padding: 2rem 1.8rem; position: relative; overflow: visible;
   text-align: center;
+  display: flex; flex-direction: column;
   transition: transform .18s var(--ease-bounce), box-shadow .18s;
 }
 .author-card:nth-child(2) { background: #d8f5e8; }
@@ -525,41 +526,51 @@ section { padding: 6rem max(2.5rem, calc((100% - 1340px) / 2)); }
 .author-card:nth-child(2)::after { animation-delay: 2.5s; }
 .author-card:nth-child(3)::after { animation-delay: 5s; }
 
-.author-img-wrap {
+/* photo area: positions the badge relative to the inner card */
+.author-photo-area {
   position: relative;
-  width: 120px; height: 120px;
-  margin: 0 auto 1.2rem;
-  border: 3px solid var(--black);
-  box-shadow: var(--sh-sm);
-  overflow: hidden;
-}
-.author-img-wrap img {
-  width: 100%; height: 100%; object-fit: cover;
+  margin-bottom: 1.5rem;
 }
 
+/* inner white card that holds only the photo */
+.author-inner-card {
+  background: var(--surface);
+  border: 3px solid var(--black);
+  box-shadow: var(--sh-sm);
+  padding: .5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.author-inner-card img {
+  width: 130px; height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+/* badge floats outside the inner card */
 .author-badge {
-  position: absolute; top: -8px; right: -12px;
-  padding: .2rem .6rem;
+  position: absolute; top: -10px; right: -10px;
+  padding: .25rem .7rem;
   background: var(--pink); color: var(--black);
-  font-family: var(--font-mono); font-size: .55rem; font-weight: 700;
+  font-family: var(--font-mono); font-size: .6rem; font-weight: 700;
   letter-spacing: .1em; border: 2px solid var(--black); box-shadow: var(--sh-xs);
   transform: rotate(3deg); z-index: 2;
 }
 .author-card:nth-child(2) .author-badge { background: var(--blue); }
 .author-card:nth-child(3) .author-badge { background: var(--lavender); }
 
-
-
 .author-name  { font-family: var(--font-display); font-size: 1.4rem; line-height:1; margin-bottom: .3rem; }
 .author-role  { font-size: .78rem; font-weight: 700; margin-bottom: .9rem; }
 .author-bio   { font-size: .82rem; line-height: 1.7; margin-bottom: 1.4rem; }
 
-.author-socials { display:flex; gap:.6rem; justify-content: center; }
+.author-socials { display:flex; gap:.6rem; justify-content: center; margin-top: auto; }
 .social-link {
-  width: 36px; height: 36px; background: var(--black);
+  width: 40px; height: 40px; background: var(--black);
   border: 2px solid var(--black); box-shadow: var(--sh-xs);
+  border-radius: 4px;
   display: flex; align-items: center; justify-content: center;
-  font-size: .75rem; color: var(--surface);
+  font-size: .85rem; color: var(--surface);
   transition: background .12s, color .12s, transform .12s var(--ease-bounce), box-shadow .12s;
 }
 .social-link:hover { background: var(--surface); color: var(--black); transform: translate(-2px,-2px); box-shadow: var(--sh-sm); }
